@@ -13,6 +13,7 @@ describe('facebook', () => {
       
            
       cy.findByTestId('open-registration-form-button').click();
+      hy()
       
       cy.findByLabelText('First name').type('Niharika');
       cy.findByLabelText('Surname').type('Verma');
