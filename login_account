@@ -1,0 +1,30 @@
+/// <reference types= "Cypress" />
+
+
+describe('facebook', () => {
+    it('Create a new account', () => {
+      cy.visit('https://www.facebook.com');
+
+      cy.findByTitle('English (UK)').click();
+    
+      cy.findByTestId('royal_email').type('niverma@gmail.com');
+      cy.findByTestId('royal_pass').type('Niharika890');
+      cy.findByTestId('royal_pass').type('Niharika890');
+      
+           
+      cy.findByTestId('open-registration-form-button').click();
+      
+      cy.findByLabelText('First name').type('Niharika');
+      cy.findByLabelText('Surname').type('Verma');
+      cy.findByLabelText('Mobile number or email address').type('niverma@gmail.com');
+      cy.findByLabelText('Re-enter email address').type('niverma@gmail.com');
+      cy.findByLabelText('New password').type('Niharika@1234');
+
+      cy.findByLabelText('Day').select('20');
+      cy.findByLabelText('Month').select('Apr');
+      cy.findByLabelText('Year').select('1999');
+
+      cy.findByText('Female').click()
+    
+    })
+  })
