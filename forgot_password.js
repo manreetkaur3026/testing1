@@ -10,8 +10,10 @@ describe('bebo technologies', () => {
 
         // Verify the url
         cy.url().should('eq','https://www.bebotechnologies.com/careers');
+        cy.url()
+        
        
-        // Click on "learning and development" and verify it highlights
+        // Click on "learning and development" and verify it highlight
         cy.contains('Learning and development').click();
         
         cy.contains('Learning and development').should('have.class', 'active');
