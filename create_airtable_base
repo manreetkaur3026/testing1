@@ -5,6 +5,7 @@ describe('Automating Airtable site',()=>{
         cy.airtablelogin(example.email,example.password1)
     })
     it('Creating new interface', () => {
+    hy
         //Navigate to interfaces
         cy.findByRole('link',{name:"Manreet"}).click()
         cy.findByRole('link',{name:'Interfaces'}).click()
